@@ -6,7 +6,8 @@ int main() {
   Blockchain blockchain;
   blockchain.createGenesisBlock();
 
-  blockchain.mineBlock("Noodles");
+  blockchain.sendTransaction("senderPrivate", "senderPublic", 5);
+  blockchain.minePendingTransactions("Noodles");
 
   std::cout << "took: " << utils::currentMillis() - start << " ms" << std::endl;
   return 0;
